@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budaya Lokal | Eksplorasi Nusantara</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+
+    <<button id="musicBtn" class="btn btn-cta ms-3">
+    🎵 Putar Musik
+</button>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Budaya Lokal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-cta ms-3" href="#submit">Ajukan Event</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-5 col-md-6 text-md-start text-center mb-4 mb-md-0">
+                <h1>Eksplorasi Budaya Nusantara</h1>
+                <p>Jelajahi festival, pementasan, dan ritual adat dari berbagai daerah di Indonesia</p>
+                <a href="#events" class="btn btn-cta">Mulai Eksplorasi</a>
+            </div>
+            
+            <div class="col-lg-6 offset-lg-1 col-md-6 text-center">
+                <img src="137.jpg" alt="Ilustrasi Budaya Nusantara" class="img-fluid hero-image-style shadow-lg rounded-3">
+            </div>
+            
+        </div>
+    </div>
+</header>
+
+    <section id="events" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Event Budaya Pilihan</h2>
+            <div class="grid-container">
+                
+                <div class="event-card">
+                    <img src="123.jpg" alt="Upacara Adat Yadnya Kasada">
+                    <div class="card-body">
+                        <h5>Upacara Adat Yadnya Kasada</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> Setiap Bulan Kasada</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Gunung Bromo, Jawa Timur</p>
+                        <p>Ritual sakral Suku Tengger yang diadakan setahun sekali di kawah Bromo.</p>
+                        <a href="kasada-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <img src="122.jpg" alt="Festival Tari Topeng Cirebon">
+                    <div class="card-body">
+                        <h5>Festival Tari Topeng Cirebon</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> 10-12 Juli 2026</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Keraton Kasepuhan, Cirebon</p>
+                        <p>Pementasan kolektif dari berbagai sanggar topeng di Jawa Barat.</p>
+                        <a href="topeng-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <img src="124.jpg" alt="Pameran Tenun Ikat Sumba">
+                    <div class="card-body">
+                        <h5>Pameran Tenun Ikat Sumba</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> 1-30 Agustus 2025</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Museum Nasional, Jakarta</p>
+                        <p>Pameran dan workshop tenun ikat dengan motif dan teknik tradisional.</p>
+                        <a href="sumba-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <img src="125.jpeg" alt="Konser Gamelan Kontemporer">
+                    <div class="card-body">
+                        <h5>Konser Gamelan Kontemporer</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> 25 September 2025</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Taman Budaya, Yogyakarta</p>
+                        <p>Perpaduan musik gamelan tradisional dengan sentuhan modern.</p>
+                        <a href="gamelan-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <img src="126.jpg" alt="Workshop Pembuatan Wayang Kulit">
+                    <div class="card-body">
+                        <h5>Workshop Pembuatan Wayang Kulit</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> Setiap Hari Sabtu</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Desa Wisata Kasongan, Bantul</p>
+                        <p>Pelatihan mendalam tentang teknik memahat dan mewarnai wayang.</p>
+                        <a href="wayang-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <img src="127.jpg" alt="Festival Pacu Jalur">
+                    <div class="card-body">
+                        <h5>Festival Pacu Jalur</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> 14-17 Agustus 2026</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Sungai Kuantan, Riau</p>
+                        <p>Perlombaan perahu tradisional (Jalur) dari Riau yang telah menjadi salah satu Warisan Budaya Tak Benda Indonesia.</p>
+                        <a href="pacujalur-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="131.jpeg" alt="Festival Erau Kutai Kartanegara">
+                    <div class="card-body">
+                        <h5>Festival Erau</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> Setiap Bulan Juli</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Tenggarong, Kutai Kartanegara</p>
+                        <p>Perayaan adat Kesultanan Kutai Kartanegara yang menampilkan tarian, ritual, dan upacara adat yang unik.</p>
+                        <a href="erau-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="132.jpg" alt="Upacara Tabuik Pariaman">
+                    <div class="card-body">
+                        <h5>Upacara Tabuik Pariaman</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> Setiap 1-10 Muharram</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Pariaman, Sumatera Barat</p>
+                        <p>Ritual tahunan memperingati wafatnya cucu Nabi Muhammad, diakhiri dengan pelarungan Tabuik ke laut.</p>
+                        <a href="tabuik-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="133.jpg" alt="Pementasan Tari Saman">
+                    <div class="card-body">
+                        <h5>Pementasan Tari Saman</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> Berbagai Waktu (Jadwal Khusus)</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Aceh Tengah</p>
+                        <p>Pementasan tari yang sangat energetik dan sinkron, diakui UNESCO sebagai Warisan Budaya Tak Benda Dunia.</p>
+                        <a href="saman-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="134.jpg" alt="Festival Perang Pasola Sumba">
+                    <div class="card-body">
+                        <h5>Festival Perang Pasola</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> Februari/Maret</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Sumba Barat, NTT</p>
+                        <p>Upacara ritual perang-perangan antara dua kelompok penunggang kuda yang saling melempar lembing kayu.</p>
+                        <a href="pasola-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="135.jpg" alt="Upacara Sekaten">
+                    <div class="card-body">
+                        <h5>Upacara Sekaten</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> Maulid Nabi Muhammad SAW</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Keraton Yogyakarta & Solo</p>
+                        <p>Perayaan tahunan Keraton Jawa untuk memperingati kelahiran Nabi Muhammad, diwarnai dengan pasar malam.</p>
+                        <a href="sekaten-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="136.jpg" alt="Festival Danau Toba">
+                    <div class="card-body">
+                        <h5>Festival Danau Toba</h5>
+                        <p class="info-bar"><i class="bi bi-calendar-event"></i> November/Desember</p>
+                        <p class="info-bar"><i class="bi bi-geo-alt"></i> Kawasan Danau Toba, Sumatera Utara</p>
+                        <p>Event wisata dan budaya yang menampilkan pertunjukan seni Batak, kuliner, dan perlombaan di Danau Toba.</p>
+                        <a href="toba-detail.html" target="_blank" class="btn btn-detail mt-2">Lihat Detail</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+<section id="about" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-5">Tentang Budaya Lokal</h2>
+        
+        <div class="row align-items-center">
+            
+            <div class="col-md-6 mb-4 mb-md-0">
+                <p class="mission-text lead">Misi kami adalah menjadi jendela digital bagi kekayaan budaya Indonesia. Kami percaya bahwa setiap festival, tarian, dan ritual adat adalah harta yang layak dikenal dunia.</p>
+                
+                <p class="mission-text">Platform ini didedikasikan untuk menghubungkan penyelenggara event lokal, seniman, dan komunitas adat dengan para pecinta budaya dan wisatawan, baik dari dalam maupun luar negeri.</p>
+                
+                <p class="mission-text"><strong>Visi Kami:</strong> Melestarikan warisan budaya melalui digitalisasi dan promosi yang berkelanjutan.</p>
+                
+                <a href="#submit" class="btn btn-cta mt-3">Bergabung dengan Komunitas Kami</a>
+            </div>
+            
+            <div class="col-md-6 text-center">
+                <img src="129.PNG" alt="Ilustrasi Budaya Nusantara" class="img-fluid hero-image-style shadow-lg rounded-3">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section id="submit" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Ajukan Event Anda</h2>
+            <p class="text-center mb-4">Punya event budaya menarik di daerah Anda? Daftarkan di sini agar dapat dilihat oleh ribuan pecinta budaya!</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="p-4 rounded-3 shadow-lg" style="background-color: var(--card-bg);">
+                        <form>
+                            <div class="mb-3">
+                                <label for="eventName" class="form-label">Nama Event</label>
+                                <input type="text" class="form-control" id="eventName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventDate" class="form-label">Tanggal Pelaksanaan</label>
+                                <input type="date" class="form-control" id="eventDate" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventLocation" class="form-label">Lokasi Detail</label>
+                                <input type="text" class="form-control" id="eventLocation" placeholder="Contoh: Kawah Bromo, Jawa Timur" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventDesc" class="form-label">Deskripsi Singkat Event</label>
+                                <textarea class="form-control" id="eventDesc" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                                <label class="form-check-label" for="termsCheck">Saya setuju Event ini tidak mengandung unsur SARA dan kekerasan.</label>
+                            </div>
+                            <button type="submit" class="btn btn-cta w-100">Kirim Pengajuan Event</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-3">&copy; 2025 Budaya Lokal. Hak Cipta Dilindungi.</p>
+            
+            <div class="social-icons mb-3">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter-x" style="font-size: 1.5rem;"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+            </div>
+            
+            <p><a href="#" class="text-warning">Kebijakan Privasi</a> | <a href="#" class="text-warning">Hubungi Kami</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script> 
+    <audio id="bgMusic" loop>
+    <source src="gamelan-bali.mp3" type="audio/mpeg">
+</audio>
+<script>
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
+
+    let isPlaying = false;
+
+    btn.addEventListener("click", () => {
+        if (!isPlaying) {
+            music.play();
+            btn.textContent = "⏸️ Hentikan Musik";
+            isPlaying = true;
+        } else {
+            music.pause();
+            btn.textContent = "🎵 Putar Musik";
+            isPlaying = false;
+        }
+    });
+</script>
+</body>
+</html>

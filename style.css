@@ -1,0 +1,419 @@
+/**
+ * ===================================================================
+ * file: style.css
+ * Deskripsi: Styling utama untuk website Budaya Lokal menggunakan
+ * konvensi BEM sederhana dan modern.
+ * ===================================================================
+ */
+
+/* =====================
+ * 1. Variabel Warna & Font
+ * ===================== */
+:root {
+    /* Palet Warna */
+    --primary-color: #6B5B95; /* Ungu/Lavender Tua - Dominan */
+    --secondary-color: #FFD700; /* Kuning Emas - Aksen */
+    --text-color: #333; /* Teks Utama */
+    --bg-light: #f9f9f9; /* Background Halaman */
+    --card-bg: #fff; /* Background Card/Element Putih */
+    --purple-light: #8e7cc3; /* Ungu Lebih Muda untuk Gradient */
+    --info-color: #5a5a5a; /* Warna untuk info bar */
+
+    /* Shadow & Border */
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* =====================
+ * 2. Reset & Tipografi Dasar
+ * ===================== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light); 
+    /* --- BARU: Tambahkan tekstur background halus --- */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4"><rect width="1" height="1" fill="%23f0f0f0" x="0" y="0"/><rect width="1" height="1" fill="%23f0f0f0" x="2" y="2"/><rect width="1" height="1" fill="%23f4f4f4" x="2" y="0"/><rect width="1" height="1" fill="%23f4f4f4" x="0" y="2"/></svg>');
+    /* ------------------------------------------------ */
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-padding-top: 75px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+/* Garis bawah elegan untuk Judul Section */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* =====================
+ * 3. Navbar Styling
+ * ===================== */
+.navbar {
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow-light);
+    transition: background-color 0.3s;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff !important;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+/* Indikator Active Link Modern */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.btn-cta {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s;
+}
+.btn-cta:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* =====================
+ * 4. Hero Section BARU (Background Gambar + Layout 2 Kolom)
+ * ===================== */
+.hero-section {
+    padding: 100px 0;
+    text-align: left;
+    
+    /* GAYA BACKGROUND GAMBAR BARU */
+    background-image: url('130.png'); /* ❗ GANTI DENGAN NAMA FILE GAMBAR ANDA (misal: 130.png atau gambar Kerajaan Nusantara) */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Memberikan efek paralaks saat discroll */
+    
+    position: relative; /* Penting untuk overlay */
+    overflow: hidden; 
+    
+    color: #fff;
+    /* Kita pertahankan clip-path untuk bentuk melengkung di bawah */
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+/* --- Tambahkan Overlay (Lapisan Gelap/Saturasi Rendah) --- */
+/* Ini penting agar teks putih di kolom kiri tetap terbaca jelas di atas gambar */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Overlay hitam transparan agar gambar tetap terlihat tapi saturasi gelap */
+    background-color: rgba(0, 0, 0, 0.55); 
+    z-index: 1; 
+}
+
+/* Posisikan teks dan konten di atas overlay */
+.hero-section .container,
+.hero-section h1,
+.hero-section p,
+.hero-section .btn-cta {
+    position: relative;
+    z-index: 2; 
+}
+
+/* Teks dan Judul */
+.hero-section h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #fff; /* Teks harus putih */
+    margin-bottom: 0.5rem;
+}
+.hero-section p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Gaya untuk gambar di Kolom Kanan */
+.hero-image-style {
+    max-height: 400px; 
+    width: 100%;
+    object-fit: cover;
+    display: block; /* PASTIKAN GAMBAR MUNCUL */
+    /* Tambahan Styling agar Gambar kolom kanan lebih menonjol */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 767px) {
+    .hero-section {
+        padding: 50px 0;
+        background-attachment: scroll; /* Matikan fixed background di mobile */
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-image-style {
+        max-height: 300px;
+    }
+}
+
+/* =====================
+ * 5. Event Section & Card
+ * ===================== */
+#events {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem; /* Tambah jarak antar card */
+}
+
+.event-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.event-card:hover {
+    transform: translateY(-8px); /* Lebih menonjol saat hover */
+    box-shadow: var(--shadow-hover);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover img {
+    transform: scale(1.05); /* Zoom in effect pada gambar */
+}
+
+.event-card .card-body {
+    padding: 1.5rem;
+}
+
+.event-card .card-body h5 {
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: color 0.3s; 
+    margin-bottom: 0.5rem; /* Kurangi margin (dari input user) */
+}
+
+.event-card .card-body p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.event-card .btn-detail {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s;
+}
+
+.event-card .btn-detail:hover {
+    background-color: #5a4a80;
+    border-color: #5a4a80;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+.event-card .info-bar { /* Style untuk tanggal dan lokasi */
+    font-size: 0.85rem;
+    color: var(--info-color);
+    margin-bottom: 0.5rem;
+}
+.event-card .info-bar i {
+    color: var(--secondary-color); /* Warna kuning untuk ikon */
+    margin-right: 5px;
+}
+
+
+/* =====================
+ * 6. Footer
+ * ===================== */
+footer {
+    background-color: #222; /* Warna yang lebih gelap */
+    color: #ccc;
+    padding: 3rem 0;
+}
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+footer a {
+    color: var(--secondary-color);
+}
+footer a:hover {
+    color: var(--purple-light);
+}
+
+/* =====================
+ * 7. Halaman Detail Event (PENTING DITAMBAHKAN)
+ * ===================== */
+
+.detail-header {
+    /* Gaya ini diambil dari <style> internal detail.html,
+       tapi dipindahkan ke sini untuk konsistensi */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.detail-header h1 { 
+    color: #fff; 
+    font-size: 3.5rem; 
+    text-align: center;
+}
+
+.detail-info {
+    /* Gaya untuk box info Jadwal dan Lokasi */
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    margin-top: -50px; /* Menaikkan box ke area header */
+    position: relative;
+    border: 1px solid #eee;
+}
+
+/* =====================
+ * 8. Utility & Responsif
+ * ===================== */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: var(--primary-color);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav-link.active::after {
+        content: none; /* Nonaktifkan indikator lingkaran di mode mobile */
+    }
+    .hero-section {
+        padding: 100px 0;
+        clip-path: none;
+    }
+    .btn-cta.ms-3 {
+        margin-left: 0 !important;
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .detail-header {
+        height: 200px;
+    }
+    .detail-header h1 {
+        font-size: 2.5rem;
+    }
+    .detail-info {
+        margin-top: -30px;
+    }
+}
+/* =====================
+ * 9. Gaya Khusus Misi & Visi
+ * ===================== */
+
+.mission-text {
+    font-family: 'Merriweather', serif; /* FONT BARU: Merriweather */
+    font-size: 1.25rem; 
+    font-weight: 300; /* Dibuat ringan untuk tampilan elegan */
+    color: var(--text-color); /* Kembali ke warna teks standar */
+    line-height: 1.8; /* Baris lebih renggang agar mudah dibaca */
+    margin-bottom: 1.5rem;
+}
+
+.mission-text.lead {
+    font-weight: 700; /* Dibuat tebal (bold) */
+    font-style: italic;
+    font-size: 1.45rem; /* Ukuran lebih besar */
+    color: var(--primary-color); /* Diberi warna ungu untuk penekanan */
+}
+.music-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    background: #6b4f33; /* coklat elegan */
+    color: #f8e9d2;       /* krem budaya */
+    border: none;
+    padding: 15px 18px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+    background: #5a3f29;
+    transform: scale(1.1);
+}
+
+.music-btn.playing {
+    background: #8b6848; /* warna berbeda saat musik ON */
+}
